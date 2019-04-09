@@ -91,15 +91,11 @@ class Meal{
   }
 
   byPrice(){
-    return store.meals.sort((meal1, meal2) => { return meal1.price - meal.price; } );
+    return store.meals.sort((meal1, meal2) => meal1.price - meal.price; );
   }
 
   customers(){
-    return store.customers.filter(
-        function(customer) {
-            return customer.mealId === this.id;
-        }.bind(this)
-    );
+    return store.customers.filter((customer) => customer.mealId === this.id; );
   }
 }
 
