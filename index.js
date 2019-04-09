@@ -48,11 +48,7 @@ class Customer{
   }
 
   meals(){
-    return store.meals.filter(
-        function(meal) {
-            return meal.deliveries().filter(function(delivery){ return delivery.customerId === this.id && delivery.neighborhoodId === this.neighborhoodId; }.bind(this) );
-        }.bind(this)
-    );//.filter((meal, index, self) => self.indexOf(meal) === index)
+    return store.meals.filter((meal) => meal.deliveries().filter(delivery => delivery.customerId === this.id && delivery.neighborhoodId === this.neighborhoodId ) );//.filter((meal, index, self) => self.indexOf(meal) === index)
   }
 }
 
