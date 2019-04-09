@@ -91,11 +91,7 @@ class Meal{
   }
 
   byPrice(){
-    return store.meals.sort(
-        function(meal1, meal2) {
-            return meal1.price - meal.price;
-        }
-    );
+    return store.meals.sort((meal1, meal2) => { return meal1.price - meal.price; } );
   }
 
   customers(){
