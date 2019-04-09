@@ -48,7 +48,7 @@ class Customer{
   }
 
   meals(){
-    return store.meals.filter((meal) => meal.deliveries().filter(delivery => delivery.customerId === this.id && delivery.neighborhoodId === this.neighborhoodId ) );//.filter((meal, index, self) => self.indexOf(meal) === index)
+    return this.deliveries().map(delivery => delivery.meal() );//.filter((meal, index, self) => self.indexOf(meal) === index)
   }
 }
 
