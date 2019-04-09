@@ -48,15 +48,11 @@ class Customer{
   }
 
   deliveries(){
-    return store.deliveries.filter(
-        function(delivery) {
-            return delivery.customerId === this.id && delivery.neighborhoodId === this.neighborhoodId;
-        }.bind(this)
-    );
+    return store.deliveries.filter((delivery) => delivery.customerId === this.id && delivery.neighborhoodId === this.neighborhoodId );
   }
 
   totalSpent(){
-    return this.meals().reduce( (total, meal) => total + meal.price;, 0 );
+    return this.meals().reduce( (total, meal) => total + meal.price, 0 );
   }
 
   meals(){
@@ -79,15 +75,15 @@ class Meal{
   }
 
   deliveries(){
-    return store.deliveries.filter((delivery) => delivery.mealId === this.id; );
+    return store.deliveries.filter((delivery) => delivery.mealId === this.id );
   }
 
   byPrice(){
-    return store.meals.sort((meal1, meal2) => meal1.price - meal.price; );
+    return store.meals.sort((meal1, meal2) => meal1.price - meal.price );
   }
 
   customers(){
-    return store.customers.filter((customer) => customer.mealId === this.id; );
+    return store.customers.filter((customer) => customer.mealId === this.id );
   }
 }
 
@@ -103,14 +99,14 @@ class Delivery{
   }
 
   meal(){
-    return store.meals.find((meal) => meal.id === this.mealId; );
+    return store.meals.find((meal) => meal.id === this.mealId );
   }
 
   customer(){
-    return store.customers.find((customer) => customer.id === this.customerId; );
+    return store.customers.find((customer) => customer.id === this.customerId );
   }
 
   neighborhood(){
-    return store.neighborhoods.find((neighborhood) => neighborhood.id === this.neighborhoodId; );
+    return store.neighborhoods.find((neighborhood) => neighborhood.id === this.neighborhoodId );
   }
 }
