@@ -107,26 +107,14 @@ class Delivery{
   }
 
   meal(){
-    return store.meals.find(
-        function(meal) {
-            return meal.id === this.mealId;
-        }.bind(this)
-    );
+    return store.meals.find((meal) => meal.id === this.mealId; );
   }
 
   customer(){
-    return store.customers.find(
-        function(customer) {
-            return customer.id === this.customerId;
-        }.bind(this)
-    );
+    return store.customers.find((customer) => customer.id === this.customerId; );
   }
 
   neighborhood(){
-    return store.neighborhoods.find(
-        function(neighborhood) {
-            return neighborhood.id === this.neighborhoodId;
-        }.bind(this)
-    );
+    return store.neighborhoods.find((neighborhood) => neighborhood.id === this.neighborhoodId; );
   }
 }
