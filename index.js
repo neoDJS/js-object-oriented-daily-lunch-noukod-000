@@ -70,7 +70,7 @@ class Meal{
     return store.deliveries.filter((delivery) => delivery.mealId === this.id );
   }
 
-  byPrice(){
+  static byPrice(){
     return store.meals.sort((meal1, meal2) => meal1.price - meal2.price );
   }
 
