@@ -71,7 +71,7 @@ class Meal{
   }
 
   byPrice(){
-    return store.meals.sort((meal1, meal2) => meal2.price - meal1.price );
+    return [...store.meals].sort((meal1, meal2) => meal2.price - meal1.price );
   }
 
   customers(){
