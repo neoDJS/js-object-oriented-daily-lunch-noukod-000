@@ -83,11 +83,7 @@ class Meal{
   }
 
   deliveries(){
-    return store.deliveries.filter(
-        function(delivery) {
-            return delivery.mealId === this.id;
-        }.bind(this)
-    );
+    return store.deliveries.filter((delivery) => delivery.mealId === this.id; );
   }
 
   byPrice(){
